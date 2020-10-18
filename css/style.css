@@ -10,22 +10,31 @@ body {
 
 header {
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
     flex-basis: 100%;
+    margin: 0 5%;
+    background-image: url(../img/fondo.jpg);
+    background-size: cover;
+    background-position: center;
 }
 
 nav {
     display: flex;
     justify-content: center;
     height: 70px;
-    margin: 0 0 50px;
+    margin: 0 5% 1%;
     padding: 0;
-    background-color: #fff;
-    border-bottom: 5px solid #261C15;
+    background-color: #303073;
+    border-top: 5px solid #104;
+    border-bottom: 5px solid #104;
+    border-radius: 0 0 20px 20px;
+
 }
 nav div {
     display: flex;
-    flex-basis: 70%;
+    flex-basis: 100%;
     justify-content: center;
 }
 nav ul {
@@ -40,33 +49,43 @@ nav ul {
 nav ul li {
     flex-basis: 20%;
     list-style: none;
-    background-color: #C8963E;
+    background-color: #f8960E;
     padding: 10px 0;
+    border-radius: 10px;
     text-align: center;
 }
 
 footer {
-    background-color: #261C15;
+    display: flex;
     flex-basis: 100%;
+    justify-content: center;
     margin: 2.5%;
     border-radius: 10px;
     padding: 10px;
+    background-color: #f8960E;
 }
 
-.headerDiv {
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    flex-basis: 100px;
-    height: 100px;
-    padding: 20px;
-    background-color: #8DFFCD;
-    border: 5px solid #E3C567;
-    border-radius: 50%;
-    margin: 10px;
+
+header #pageTitle {
+    flex:2;
+    padding: 10px 20px;
+    margin: 20px auto 0;
+    border-radius: 15px;
+    font-size: 4vw;
+    text-transform: uppercase;
+    color:#fff;
+    background-color: #ff960E;
 }
-.headerDiv h2 {
-    font-size: 11pt;
+header #pageSubtitle {
+    flex: 1;
+    padding: 10px 40px;
+    margin:0 auto 10px;
+    border-top: 15px solid #825;
+    border-radius: 0 0 10px 10px;
+    background-color: #ed8c00;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 1.5vw;
 }
 #mainPage {
     display: flex;
@@ -75,7 +94,7 @@ footer {
 }
 .mainSection {
     margin: 20px;
-    border-radius: 25px;
+    text-align: center;
 }
 .background {
     background: #822 no-repeat scroll center;
@@ -91,11 +110,11 @@ footer {
     background-color: #00003388;
     color: #fff;
 }
+
 #bck1 h2{
-    font-size: 20pt;
+    font-size: 3vw;
 }
 .mainArticle {
-    text-align: center;
     border-radius: 25px;
 }
 .previewText{
@@ -112,23 +131,30 @@ footer {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
-    text-align: center;
+    border-top: 3px solid #ed8c00;
+    border-bottom: 3px solid #ed8c00;
 }
 .sideArticle {
     flex: 1;
-    min-width: 250px;
+    min-width: 350px;
     margin: 10px 10px;
     border-radius: 25px;
+    font-size: 1.5vw;
 }
 .previewText:hover .show, .bck2:hover .show, .bck3:hover .show, .bck4:hover .show{
     display: none;
 }
 .hidde{
     display: none;
-    font-size: xx-large;
+    font-size: 2vw;
 }
 .previewText:hover .hidde, .bck2:hover .hidde, .bck3:hover .hidde, .bck4:hover .hidde{
     display: block;
+}
+.previewText .hidde{
+    color: #822;
+    text-transform: uppercase;
+    font-size: 4vw;
 }
 .bck2{
     background-image: url(../img/VideoThumbnail.jpg);
