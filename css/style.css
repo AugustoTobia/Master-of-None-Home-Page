@@ -1,0 +1,117 @@
+body {
+    display: flex;
+    flex-flow: column;
+    background-color: #eeeeee;
+    padding: 0;
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu,
+        Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    flex-basis: 100%;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    height: 70px;
+    margin: 0 0 50px;
+    padding: 0;
+    background-color: #fff;
+    border-bottom: 5px solid #261C15;
+}
+nav div {
+    display: flex;
+    flex-basis: 70%;
+    justify-content: center;
+}
+nav ul {
+    flex-basis: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-flow: row nowrap;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+}
+nav ul li {
+    flex-basis: 20%;
+    list-style: none;
+    background-color: #C8963E;
+    padding: 10px 0;
+    text-align: center;
+}
+
+footer {
+    background-color: #261C15;
+    flex-basis: 100%;
+    margin: 2.5%;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.headerDiv {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    flex-basis: 100px;
+    height: 100px;
+    padding: 20px;
+    background-color: #8DFFCD;
+    border: 5px solid #E3C567;
+    border-radius: 50%;
+    margin: 10px;
+}
+.headerDiv h2 {
+    font-size: 11pt;
+}
+#mainPage {
+    display: flex;
+    flex-flow: column nowrap;
+    margin:0 5%;
+}
+#mainPage .mainSection {
+    margin: 20px;
+}
+.background {
+    background: #822 no-repeat scroll center;
+    background-size: cover;
+    border-radius: 25px 25px 0 0;
+    padding: 40px;
+}
+.background h2 {
+    margin: 0;
+}
+.screen {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    padding: 20px;
+    border-radius: 0 0 25px 25px;
+    background-color: #ffffffcc;
+    color: #000;
+}
+
+.mainArticle {
+    text-align: center;
+}
+#bck1 {
+    background-image: url(../img/Crash-Bandicoot-4-generacion-xbox.jpg);
+}
+.secondaryArticles {
+    display: flex;
+    flex-flow: row wrap;
+}
+.sideArticle {
+    flex: 1;
+    min-width: 200px;
+    margin: 10px 10px;
+    border: 3px solid brown;
+    border-radius: 25px;
+}
+.bck2{
+    background-image: url(../img/VideoThumbnail.jpg);
+}
