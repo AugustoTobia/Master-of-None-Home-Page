@@ -1,7 +1,7 @@
 body {
     display: flex;
     flex-flow: column;
-    background-color: #eeeeee;
+    background-color: #08000f;
     padding: 0;
     margin: 0;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu,
@@ -73,45 +73,69 @@ footer {
     flex-flow: column nowrap;
     margin:0 5%;
 }
-#mainPage .mainSection {
+.mainSection {
     margin: 20px;
+    border-radius: 25px;
 }
 .background {
     background: #822 no-repeat scroll center;
     background-size: cover;
-    border-radius: 25px 25px 0 0;
-    padding: 40px;
-}
-.background h2 {
-    margin: 0;
+    border-radius: inherit;
 }
 .screen {
-    display: flex;
-    flex-flow: column;
-    align-items: center;
-    padding: 20px;
-    border-radius: 0 0 25px 25px;
-    background-color: #ffffffcc;
-    color: #000;
+    width: 90%;
+    height: auto;
+    padding: 5%;
+    margin: 0;
+    border-radius: inherit;
+    background-color: #00003388;
+    color: #fff;
 }
-
+#bck1 h2{
+    font-size: 20pt;
+}
 .mainArticle {
     text-align: center;
+    border-radius: 25px;
+}
+.previewText{
+    padding:5%;
+    background-color: white;
+    border-radius:  0 0 25px 25px;  
 }
 #bck1 {
     background-image: url(../img/Crash-Bandicoot-4-generacion-xbox.jpg);
+    border-radius: 25px 25px 0 0;
 }
+
 .secondaryArticles {
     display: flex;
     flex-flow: row wrap;
+    justify-content: center;
+    text-align: center;
 }
 .sideArticle {
     flex: 1;
-    min-width: 200px;
+    min-width: 250px;
     margin: 10px 10px;
-    border: 3px solid brown;
     border-radius: 25px;
+}
+.previewText:hover .show, .bck2:hover .show, .bck3:hover .show, .bck4:hover .show{
+    display: none;
+}
+.hidde{
+    display: none;
+    font-size: xx-large;
+}
+.previewText:hover .hidde, .bck2:hover .hidde, .bck3:hover .hidde, .bck4:hover .hidde{
+    display: block;
 }
 .bck2{
     background-image: url(../img/VideoThumbnail.jpg);
+}
+.bck3{
+    background-image: url(../img/gsmarena_004.jpg);
+}
+.bck4{
+    background-image: url(../img/frostmaiden.jpg);
 }
