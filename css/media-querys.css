@@ -1,0 +1,29 @@
+@media (min-width: 768px) {
+    #webNavMenu {
+        display: flex;
+    }
+    #burgerMenu {
+        display: none;
+    }
+    .featureBck {
+        font-size: 3vw;
+    }
+    .sideArticle {
+        font-size: 1vw;
+    }
+    .hidde {
+        font-size: 1vw;
+    }
+}
+@media (min-width: 1024px) {
+    main {
+        flex-flow: row nowrap;
+    }
+    .secondaryArticles{
+        flex-flow: column;
+        margin: 0 20px;
+    }
+    .hidde {
+        visibility: hidden;
+    }
+}

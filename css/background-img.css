@@ -1,0 +1,28 @@
+.background {
+    display: inherit;
+    width: 100%;
+    background: #822 no-repeat scroll center;
+    background-size: cover;
+    border-radius: inherit;
+}
+.screen {
+    width: 90%;
+    height: auto;
+    padding: 5%;
+    margin: 0;
+    border-radius: inherit;
+    background-color: #00003388;
+    color: #fff;
+}
+.featureBck {
+    background-image: url(../img/Crash-Bandicoot-4-generacion-xbox.jpg);
+}
+.bck2 {
+    background-image: url(../img/video-thumbnail.jpg);
+}
+.bck3 {
+    background-image: url(../img/gsmarena_004.jpg);
+}
+.bck4 {
+    background-image: url(../img/frostmaiden.jpg);
+}
