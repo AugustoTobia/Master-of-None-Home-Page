@@ -20,7 +20,8 @@ header {
 
 main {
     display: flex;
-    flex-flow: column;
+    flex-flow: row wrap;
+    justify-content: space-around;
     margin: 0 2.5%;
 }
 
@@ -53,7 +54,6 @@ time {
     flex-basis: 50%;
     align-items: center;
     align-self: center;
-    display: inline;
     margin: auto;
     text-align: center;
 }
@@ -81,7 +81,6 @@ time {
 }
 
 #burgerMenu {
-    display: inline;
     flex-basis: 50px;
     justify-content: flex-start;
     align-self: flex-start;
