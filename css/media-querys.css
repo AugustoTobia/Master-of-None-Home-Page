@@ -11,9 +11,6 @@
     .sideArticle {
         font-size: 1vw;
     }
-    .hidde {
-        font-size: 1vw;
-    }
 }
 @media (min-width: 1024px) {
     .secondaryArticles{
@@ -22,5 +19,9 @@
     }
     .hidde {
         visibility: hidden;
+        font-size: 0.9vw;
+    }
+    .previewText:hover .hidde, .bck2:hover .hidde, .bck3:hover .hidde, .bck4:hover .hidde{
+        visibility: visible;
     }
 }
