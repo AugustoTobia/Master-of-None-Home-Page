@@ -1,0 +1,100 @@
+main {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    margin: 0 2.5%;
+}
+
+/* Global casses */
+
+.background {
+    display: inherit;
+    width: 100%;
+    background: #822 no-repeat scroll center;
+    background-size: cover;
+    border-radius: inherit;
+}
+.screen {
+    width: 90%;
+    height: auto;
+    padding: 5%;
+    margin: 0;
+    border-radius: inherit;
+    background-color: #00003388;
+    color: #fff;
+}
+/* Most important article */
+.mainSection {
+    display: flex;
+    text-align: center;
+    flex: 3;
+    min-width: 65%;
+}
+.mainArticle {
+    flex-direction: column;
+    align-items: center;
+    margin: 0 0 20px;
+    border-radius: 25px;
+}
+.featureBck {
+    border-radius: 25px 25px 0 0;
+    font-size: 4vw;
+    font-weight: 700;
+}
+.previewText {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5%;
+    background-color: white;
+    border-radius:  0 0 25px 25px;  
+}
+.hidde {
+    visibility: visible;
+    font-size: 3vw;
+    max-width: 25%;
+    margin: auto;
+    border-bottom: 5px solid #ed8c00;
+    font-weight: 800;
+}
+.previewText .hidde a {
+    color: #822;
+    text-transform: uppercase;
+}
+
+.featureBck {
+    background-image: url(../img/Crash-Bandicoot-4-generacion-xbox.jpg);
+}
+
+/* Secondary articles */
+
+.secondaryArticles {
+    flex-flow: row wrap;
+    flex: 1;
+    justify-content: center;
+    min-width: 292px;
+    margin: 2.5%;
+    border-top: 3px solid #ed8c00;
+    border-bottom: 3px solid #ed8c00;
+}
+.secondaryArticles a {
+    flex: 1;
+}
+.sideArticle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 250px;
+    margin: 10px 10px;
+    border-radius: 25px;
+    font-size: 3vw;
+}
+.bck2 {
+    background-image: url(../img/video-thumbnail.jpg);
+}
+.bck3 {
+    background-image: url(../img/gsmarena_004.jpg);
+}
+.bck4 {
+    background-image: url(../img/frostmaiden.jpg);
+}

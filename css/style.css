@@ -1,64 +1,10 @@
 
-.mainSection {
-    display: flex;
-    text-align: center;
-    flex: 3;
-    min-width: 65%;
-}
-.mainArticle {
-    flex-direction: column;
-    align-items: center;
-    margin: 0 0 20px;
-    border-radius: 25px;
-}
-.featureBck {
-    border-radius: 25px 25px 0 0;
-    font-size: 4vw;
-    font-weight: 700;
-}
-.previewText {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 5%;
-    background-color: white;
-    border-radius:  0 0 25px 25px;  
-}
-.hidde {
-    visibility: visible;
-    font-size: 3vw;
-    max-width: 25%;
-    margin: auto;
-    border-bottom: 5px solid #ed8c00;
-    font-weight: 800;
-}
-.previewText .hidde a {
-    color: #822;
-    text-transform: uppercase;
-}
 
-.secondaryArticles {
-    flex-flow: row wrap;
-    flex: 1;
-    justify-content: center;
-    min-width: 292px;
-    margin: 2.5%;
-    border-top: 3px solid #ed8c00;
-    border-bottom: 3px solid #ed8c00;
-}
-.secondaryArticles a {
-    flex: 1;
-}
-.sideArticle {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    min-width: 250px;
-    margin: 10px 10px;
-    border-radius: 25px;
-    font-size: 3vw;
-}
-
-.previewText:hover .hidde, .bck2:hover .hidde, .bck3:hover .hidde, .bck4:hover .hidde {
-    visibility: visible;
+body {
+    flex-flow: column;
+    background-color: #08000f;
+    padding: 0;
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu,
+        Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
