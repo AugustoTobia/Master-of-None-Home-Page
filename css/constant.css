@@ -53,6 +53,7 @@ time {
     flex-basis: 50%;
     align-items: center;
     align-self: center;
+    display: inline;
     margin: auto;
     text-align: center;
 }
@@ -80,6 +81,7 @@ time {
 }
 
 #burgerMenu {
+    display: inline;
     flex-basis: 50px;
     justify-content: flex-start;
     align-self: flex-start;
