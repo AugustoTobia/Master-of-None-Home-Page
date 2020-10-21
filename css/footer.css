@@ -1,3 +1,14 @@
+footer {
+    display: flex;
+    flex-basis: 100%;
+    justify-content: center;
+    padding: 10px;
+    margin: 2.5%;
+    border-radius: 10px;
+    background-color: #f8960E;
+    color: #fff;
+    text-align: center;
+}
 footer a {
     font-weight: 600;
     color: #822
