@@ -14,7 +14,6 @@
 }
 @media (min-width: 1024px) {
     .secondaryArticles{
-        flex-flow: column;
         margin: 0 20px;
     }
     .hidde {
@@ -23,5 +22,8 @@
     }
     .previewText:hover .hidde, .bck2:hover .hidde, .bck3:hover .hidde, .bck4:hover .hidde{
         visibility: visible;
+    }
+    .articleTitle{
+        font-size: 1vw;
     }
 }

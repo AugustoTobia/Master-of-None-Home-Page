@@ -8,7 +8,7 @@ a {
     color: #fff;
     text-decoration: none;
 }
-/* Global casses */
+/* Global classes */
 
 .background {
     display: inherit;
@@ -30,7 +30,7 @@ a {
 .mainSection {
     display: flex;
     text-align: center;
-    flex: 3;
+    flex: 1 0 0;
     min-width: 65%;
 }
 .mainArticle {
@@ -91,7 +91,6 @@ a {
     margin: 10px 10px;
     border-radius: 25px;
     font-size: 3vw;
-    font-weight: 700;
 }
 .bck2 {
     background-image: url(../img/video-thumbnail.jpg);

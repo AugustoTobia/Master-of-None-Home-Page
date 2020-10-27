@@ -1,0 +1,31 @@
+#articleList{
+    display: flex;
+    flex-flow: column;
+    min-width: 90%;
+    margin: 30px 0;
+}
+.articleItem{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    flex:1 1;
+    min-width: 95%;
+    flex-basis: 150px;
+    padding: 10px 2.5%;
+    margin: 20px 0;
+    border: 6px solid #f8960E;
+    border-radius: 20px;
+}
+.thumbnail{
+    display: flex;
+    max-height: 80%;
+}
+.articleTitle{
+    flex-basis: 75%;
+    color: #fff;
+    font-size: 3vw;
+    flex-grow: 1;
+    flex-shrink: 1;
+    margin: 0 2.5%;
+}
