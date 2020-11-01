@@ -1,0 +1,45 @@
+main {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    margin: 0 2.5%;
+}
+a {
+    color: #fff;
+    text-decoration: none;
+}
+h1{
+    text-align: center;
+    font-size: 3vw;
+    color: #fff;
+}
+form {
+    display: flex;
+    flex-flow: row wrap;
+    flex-basis: 100%;
+    justify-content: space-around;
+    max-width: 750px;
+    padding:20px;
+    border-radius: 15px;
+    background-color: #ed8c00;
+}
+input{
+    flex: 1 1 350px;
+    min-width: 340px;
+    display: block;
+}
+.formImput{
+    flex: 1 1 350px;
+    justify-content: center;
+    min-width: 340px;
+    max-width: 50%;
+    margin: 5px;
+    font-size: 14pt;
+    color: #fff;
+}
+.buttons{
+    flex-basis: 100%;
+    align-self: center;
+    margin: 5px;
+    text-align: center;
+}
