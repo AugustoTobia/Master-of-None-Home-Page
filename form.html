@@ -65,55 +65,64 @@
         </h1>
 
         <form id="form">
-            <section class="formImput">
+            <section class="formImput" id="fullName">
                 <label for="fullName">Full Name</label>
-                <input type="text" id="fullName">
-        
+                <input type="text">
+                <p id="errorFullName" class="errorMessage">Must contain name and lastname with a blank space in between and 8 digits at least.</p>
             </section>
 
-            <section class="formImput">
+            <section class="formImput" id="email">
                 <label for="email">Email</label>
-                <input type="email" id="email">
+                <input type="email">
+                <p class="errorMessage">Must correspond with an email. Example: "address@email.com".</p>
             </section>
             
-            <section class="formImput">
+            <section class="formImput"  id="password">
                 <label for="password">Password</label>
-                <input type="password" id="password">
+                <input type="password">
+                <p class="errorMessage">Must contain an leas 8 caracters and at least one number and one letter.</p>
             </section>
             
-            <section class="formImput">
-                    <label for="repeatPassword">Repeat Password</label>
-                    <input type="password" id="repeatPassword">
+            <section class="formImput" id="repeatPassword">
+                <label for="repeatPassword">Repeat Password</label>
+                <input type="password">
+                <p class="errorMessage">It doesn't correspond to the password</p>
             </section>
             
-            <section class="formImput">
+            <section class="formImput"  id="age">
                 <label for="age">Your Age</label>
-                <input type="number" id="age">
+                <input type="number">
+                <p class="errorMessage">You must be older than 18 years to susbcribe to our service. ¡Go check with your parents!</p>
             </section>
             
-            <section class="formImput">
+            <section class="formImput" id="phoneNumber">
                 <label for="phoneNumber">Phone Number</label>
-                <input type="tel" id="phoneNumber" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}">
+                <input type="tel">
+                <p class="errorMessage">Mus have at least 7 diggits and no separators or blank spaces.</p>
             </section>
             
-            <section class="formImput">
+            <section class="formImput" id="direction">
                 <label for="direction">Direction</label>
-                <input type="text" id="direction">
+                <input type="text">
+                <p class="errorMessage">Must have at least 5 letters and a number separated by a blank space.</p>
             </section>
             
-            <section class="formImput">
+            <section class="formImput" id="city">
                 <label for="city">City</label>
-                <input type="text" id="city">
+                <input type="text">
+                <p class="errorMessage">Must have at least 3 characters.</p>
             </section>
             
-            <section class="formImput">
+            <section class="formImput" id="postalCode">
                 <label for="postalCode">Postal Code</label>
-                <input type="number" id="postalCode">
+                <input type="number">
+                <p class="errorMessage">Must have at least 3 characters</p>
             </section>
             
-            <section class="formImput">
+            <section class="formImput" id="dni">
                 <label for="dni">DNI</label>
-                <input type="number" id="dni">
+                <input type="number">
+                <p class="errorMessage">Must be 7 o 8 numbers with no separetor or blank spaces.</p>
             </section>
             <section class="buttons">
                 <button>Cancel</button>

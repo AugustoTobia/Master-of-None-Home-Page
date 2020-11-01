@@ -43,3 +43,12 @@ input{
     margin: 5px;
     text-align: center;
 }
+
+.errorMessage {
+    display: none;
+}
+.errorActive {
+    display: block;
+    font-size: 2vw;
+    color: #050505;
+}
