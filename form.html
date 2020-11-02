@@ -36,27 +36,32 @@
     <nav id="webNavMenu">
         <div>
             <ul>
-                <li>
-                    <a href="">
+                <li class="unactiveLink">
+                    <a href="index.html">
                         Home
                     </a>
                 </li>
-                <li>
+                <li class="unactiveLink">
                     <a href="">
                         New
                     </a href="">
                 </li>
-                <li>
+                <li class="unactiveLink">
                     <a href="">
                         PlayStation
                     </a>
                 </li>
-                <li>
+                <li class="unactiveLink">
                     <a href="">
                         PC
                     </a>
                 </li>
-            </ul>
+                <li class="activeLink">
+                    <a href="form.html">
+                        Subscribe
+                    </a>
+                </li>
+        </ul>
         </div>
     </nav>
     <main>
@@ -64,69 +69,72 @@
             Subscribe to a monthly subscription so you get noticed of all the new developments in the videogame industry
         </h1>
 
-        <form id="form">
-            <section class="formImput" id="fullName">
-                <label for="fullName">Full Name</label>
-                <input type="text">
-                <p id="errorFullName" class="errorMessage">Must contain name and lastname with a blank space in between and 8 digits at least.</p>
+        <form id="form" action="">
+            <section id="info">
+                <section class="formImput" id="fullName">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name">
+                    <p id="errorFullName" class="errorMessage">Must contain name and lastname with a blank space in between and 6 digits at least.</p>
+                </section>
+
+                <section class="formImput" id="email">
+                    <label for="mail">Email</label>
+                    <input type="email" id="mail">
+                    <p class="errorMessage">Must correspond with an email. Example: "address@email.com".</p>
+                </section>
+                
+                <section class="formImput"  id="password">
+                    <label for="pass">Password</label>
+                    <input type="password" id="pass">
+                    <p class="errorMessage">Must contain an leas 8 caracters and at least one number and one letter.</p>
+                </section>
+                
+                <section class="formImput" id="repeatPassword">
+                    <label for="repPass">Repeat Password</label>
+                    <input type="password" id="repPass">
+                    <p class="errorMessage">It doesn't correspond to the password</p>
+                </section>
+                
+                <section class="formImput"  id="age">
+                    <label for="years">Your Age</label>
+                    <input type="number" id="years">
+                    <p class="errorMessage">You must be older than 18 years to susbcribe to our service. ¡Go check with your parents!</p>
+                </section>
+                
+                <section class="formImput" id="phoneNumber">
+                    <label for="tel">Phone Number</label>
+                    <input type="tel" id="tel">
+                    <p class="errorMessage">Mus have at least 7 diggits and no separators or blank spaces.</p>
+                </section>
+                
+                <section class="formImput" id="direction">
+                    <label for="dir">Direction</label>
+                    <input type="text" id="dir">
+                    <p class="errorMessage">Must have at least 5 letters and a number separated by a blank space.</p>
+                </section>
+                
+                <section class="formImput" id="city">
+                    <label for="cit">City</label>
+                    <input type="text" id="cit">
+                    <p class="errorMessage">Must have at least 3 characters.</p>
+                </section>
+                
+                <section class="formImput" id="postalCode">
+                    <label for="postal">Postal Code</label>
+                    <input type="text" id="postal">
+                    <p class="errorMessage">Must have at least 3 characters</p>
+                </section>
+                
+                <section class="formImput" id="dni">
+                    <label for="document">DNI</label>
+                    <input type="number" id="document">
+                    <p class="errorMessage">Must be 7 o 8 numbers with no separetor or blank spaces.</p>
+                </section>
             </section>
 
-            <section class="formImput" id="email">
-                <label for="email">Email</label>
-                <input type="email">
-                <p class="errorMessage">Must correspond with an email. Example: "address@email.com".</p>
-            </section>
-            
-            <section class="formImput"  id="password">
-                <label for="password">Password</label>
-                <input type="password">
-                <p class="errorMessage">Must contain an leas 8 caracters and at least one number and one letter.</p>
-            </section>
-            
-            <section class="formImput" id="repeatPassword">
-                <label for="repeatPassword">Repeat Password</label>
-                <input type="password">
-                <p class="errorMessage">It doesn't correspond to the password</p>
-            </section>
-            
-            <section class="formImput"  id="age">
-                <label for="age">Your Age</label>
-                <input type="number">
-                <p class="errorMessage">You must be older than 18 years to susbcribe to our service. ¡Go check with your parents!</p>
-            </section>
-            
-            <section class="formImput" id="phoneNumber">
-                <label for="phoneNumber">Phone Number</label>
-                <input type="tel">
-                <p class="errorMessage">Mus have at least 7 diggits and no separators or blank spaces.</p>
-            </section>
-            
-            <section class="formImput" id="direction">
-                <label for="direction">Direction</label>
-                <input type="text">
-                <p class="errorMessage">Must have at least 5 letters and a number separated by a blank space.</p>
-            </section>
-            
-            <section class="formImput" id="city">
-                <label for="city">City</label>
-                <input type="text">
-                <p class="errorMessage">Must have at least 3 characters.</p>
-            </section>
-            
-            <section class="formImput" id="postalCode">
-                <label for="postalCode">Postal Code</label>
-                <input type="number">
-                <p class="errorMessage">Must have at least 3 characters</p>
-            </section>
-            
-            <section class="formImput" id="dni">
-                <label for="dni">DNI</label>
-                <input type="number">
-                <p class="errorMessage">Must be 7 o 8 numbers with no separetor or blank spaces.</p>
-            </section>
             <section class="buttons">
-                <button>Cancel</button>
-                <input type="submit" id="submit">
+                <input type="button" id="cancel" class="formButton" value="Cancel">
+                <input type="submit" id="submit" class="formButton" value="Submit">
             </section>
         </form>
 

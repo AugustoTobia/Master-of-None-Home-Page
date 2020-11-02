@@ -11,20 +11,7 @@
 
 
 
-
-
-var form = document.getElementById('form');
-
-form.addEventListener('submit', prevent);
-
-function prevent(e){
-    e.preventDefault();
-    console.log(tel)
-}
-
-
-var inputs = [fullName, email, password, repeatPassword, age, tel, direction, city, postalCode, dni],
-fullName = document.getElementById('fullName'),
+var fullName = document.getElementById('fullName'),
 email = document.getElementById('email'),
 password = document.getElementById('password'),
 repeatPassword = document.getElementById('repeatPassword'),
@@ -35,8 +22,10 @@ postalCode = document.getElementById('postalCode'),
 city = document.getElementById('city'),
 dni = document.getElementById('dni');
 
-var submit = document.getElementById('submit')
+var submit = document.getElementById('submit'),
+form = document.getElementById('form');
 
+//Event Listeners
 fullName.querySelector('input').addEventListener('blur', valFullName);
 email.querySelector('input').addEventListener('blur', valEmail);
 password.querySelector('input').addEventListener('blur',valPassword);
@@ -45,7 +34,7 @@ age.querySelector('input').addEventListener('blur', valAge);
 tel.querySelector('input').addEventListener('blur', valTel);
 direction.querySelector('input').addEventListener('blur', valDirection);
 city.querySelector('input').addEventListener('blur', valCity);
-postalCode.querySelector('input').addEventListener('blur', valOrPostalCode );
+postalCode.querySelector('input').addEventListener('blur', valPostalCode );
 dni.querySelector('input').addEventListener('blur', valDni);
 
 fullName.querySelector('input').addEventListener('focus', focusFullName);
@@ -59,16 +48,20 @@ city.querySelector('input').addEventListener('focus', focusCity);
 postalCode.querySelector('input').addEventListener('focus', focusPostalCode );
 dni.querySelector('input').addEventListener('focus', focusDni);
 
+form.addEventListener('submit', submitForm);
+// submit.addEventListener('submit', submitForm)
 
-submit.addEventListener('click', submitForm)
 
+//Function On Blur
 /*Se podria realizar un array con los hijos del nodo Form y un loop cargando los valores de cada input y 
 chequeandolos contra el pattern correspondiente. Si tengo tiempo lo hago*/
-function valFullName(e){
-    var fullNameInput = fullName.querySelector('input').value,
-    patt = /[a-zA-Z]+\s[a-zA-Z]+/;
 
-    if (patt.test(fullNameInput) && fullNameInput.length >= 8){
+function valFullName(){
+    var val = fullName.querySelector('input').value,
+    patt = /[a-zA-Z]+\s[a-zA-Z]+/,
+    exclude = /\d/;
+
+    if (patt.test(val) == true && val.length >= 6 && exclude.test(val) == false){
         console.log('right');
         return true;
     } else {
@@ -77,7 +70,7 @@ function valFullName(e){
         return false;
     }
 }
-function valEmail(e){
+function valEmail(){
     var value = email.querySelector('input').value,
     patt = /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
     if (patt.test(value) === true){
@@ -89,25 +82,27 @@ function valEmail(e){
         return false;
     }
 }
-function valPassword(e){
+function valPassword(){
     var val = password.querySelector('input').value,
-    patt = /[a-zA-Z0-9]{8,}\d+\D+/
+    patt = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/
     if(patt.test(val) === true){
         console.log(val)
+        console.log('BIEEEEN')
         return true;
     } else{
-        console.log('error')
+        console.log('error');
+        console.log(val);
         password.querySelector('p').className = 'errorActive';
         return false;
     }
 }
-function valRepeatPassword(e){
+function valRepeatPassword(){
     var val = repeatPassword.querySelector('input').value,
-    ref = document.getElementById('repeatPassword').value;
-    if (val === ref){
+    patt = document.getElementById('password').querySelector('input').value;
+    if (val === patt){
         console.log('Bien hecho');
         return true;
-    } else {
+    } else {    
         console.log('Maaal');
         repeatPassword.querySelector('p').className = 'errorActive';
         return false;
@@ -125,7 +120,7 @@ function valAge(){
 }
 function valTel(){
     var val = tel.querySelector('input').value,
-    patt = /\d{7,}/;
+    patt = /^([0-9]{7,}$)/;
     if (patt.test(val) == false){
         console.log('you made a mistake');
         tel.querySelector('p').className = 'errorActive';
@@ -136,7 +131,7 @@ function valTel(){
 }
 function valDirection(){
     var val = direction.querySelector('input').value,
-    patt = /\w{5,}\s\d+/;
+    patt = /[a-zA-Z]{5,}\s\d+/;
     if(patt.test(val) == false){
         console.log('la cagaste');
         direction.querySelector('p').className = 'errorActive';
@@ -158,8 +153,8 @@ function valCity(){
     }
 }
 
-function valOrPostalCode(){
-    var val = city.querySelector('input').value,
+function valPostalCode(){
+    var val = postalCode.querySelector('input').value,
     patt = /[a-zA-Z0-9]{3,}/;
     if(patt.test(val) == false){
         console.log('mala esa')
@@ -171,9 +166,8 @@ function valOrPostalCode(){
 }
 
 function valDni(){
-    var val = dni.querySelector('input').value,
-    patt = /[0-9]{7,8}/
-    if(patt.test(val) == false){
+    var val = dni.querySelector('input').value;
+    if(val.length < 7 || val.length >8){
         console.log('mala esa')
         dni.querySelector('p').className = 'errorActive';
         return false;
@@ -181,26 +175,8 @@ function valDni(){
         return true;
     }
 }
-var count = 0,
-submitTxt = '';
-function submitForm(e){
-    e.preventDefault
-    var validations = [valFullName(),valEmail(),valPassword(),valRepeatPassword(),valAge(),valTel(),valDirection(),valCityOrPostalCode(),valDni()];
-    for(i = 0; i < validations.length; i++){
-        console.log(validations[i]);
-        if (validations[i] = true){
-            submitTxt = submitTxt + inputs[i]
-            count = count++;
-            return                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
-        }
-    }
-    if (count == 9){
-        alert(submitTxt);
-    } else {
-        console.log(count)
-        alert('error');
-    }
-}
+
+// Function On Focus
 function focusFullName(){
     fullName.querySelector('p').className = 'errorMessage';
 }
@@ -231,3 +207,34 @@ function focusPostalCode(){
 function focusDni(){
     dni.querySelector('p').className = 'errorMessage';
 }
+
+//Function Submit
+var submitTxt = '';
+
+
+function submitForm(e){
+    var validations = [valFullName(),valEmail(),valPassword(),valRepeatPassword(),valAge(),valTel(),valDirection(),valCity(),valPostalCode(),valDni()],
+    inputs = [fullName, email, password, repeatPassword, age, tel, direction, city, postalCode, dni],
+    values = [fullName.querySelector('input').value, email.querySelector('input').value, 
+    password.querySelector('input').value, repeatPassword.querySelector('input').value, age.querySelector('input').value, 
+    tel.querySelector('input').value, direction.querySelector('input').value, city.querySelector('input').value, 
+    postalCode.querySelector('input').value, dni.querySelector('input').value];
+    var count = 0; 
+
+    
+    for(i = 0; i < validations.length; i++){
+        if (validations[i] == true){
+            submitTxt = submitTxt + ' ' + values[i];
+            count = ++count;
+        }
+    }
+    if (count == 10){
+        alert(values.join("\n"));
+    } else {
+        console.log(count)
+        alert('error');
+        console.log(submitTxt)
+    }
+    e.preventDefault()
+}
+

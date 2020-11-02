@@ -29,8 +29,8 @@ a {
     padding: 0;
     margin: 0;
 }
-#webNavMenu ul li {
-    flex-basis: 20%;
+#webNavMenu ul .unactiveLink {
+    flex-basis: 15%;
     list-style: none;
     background-color: #f8960E;
     padding: 10px 0;
@@ -40,4 +40,19 @@ a {
     color: #fff;
     font-size: 1.5vmax;
     font-weight: 700;
+}
+#webNavMenu ul .unactiveLink:hover {
+    background-color: #ffbc40;
+}
+.activeLink {
+    flex-basis: 15%;
+    list-style: none;
+    background-color: #ffbc40;
+    padding: 10px 0;
+    border-radius: 10px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 1.5vmax;
+    font-weight: 900;
 }

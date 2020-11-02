@@ -16,14 +16,19 @@ h1{
 form {
     display: flex;
     flex-flow: row wrap;
-    flex-basis: 100%;
-    justify-content: space-around;
     max-width: 750px;
     padding:20px;
     border-radius: 15px;
     background-color: #ed8c00;
 }
-input{
+#info{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+
+
+}
+#info input{
     flex: 1 1 350px;
     min-width: 340px;
     display: block;
@@ -38,7 +43,9 @@ input{
     color: #fff;
 }
 .buttons{
+    display: flex;
     flex-basis: 100%;
+    justify-content: space-around;
     align-self: center;
     margin: 5px;
     text-align: center;
@@ -51,4 +58,11 @@ input{
     display: block;
     font-size: 2vw;
     color: #050505;
+}
+.formButton{
+    max-width: 20%;
+    background-color: #08000f;
+    color: #fff;
+    border: 5px solid #ffbc40;
+    border-radius: 5px;
 }
