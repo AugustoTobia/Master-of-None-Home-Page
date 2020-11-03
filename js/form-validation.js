@@ -23,7 +23,8 @@ city = document.getElementById('city'),
 dni = document.getElementById('dni');
 
 var submit = document.getElementById('submit'),
-form = document.getElementById('form');
+form = document.getElementById('form'),
+autoText = document.getElementById('autoText');
 
 //Event Listeners
 fullName.querySelector('input').addEventListener('blur', valFullName);
@@ -55,6 +56,21 @@ form.addEventListener('submit', submitForm);
 //Function On Blur
 /*Se podria realizar un array con los hijos del nodo Form y un loop cargando los valores de cada input y 
 chequeandolos contra el pattern correspondiente. Si tengo tiempo lo hago*/
+
+// questions = [fullName, email, password, repeatPassword, age, tel, direction, city, postalCode, dni];
+// patterns = [/[a-zA-Z]+\s[a-zA-Z]+/,/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/,
+// /[a-zA-Z0-9]{8,}/,document.getElementById('password').value,/[18,]/,
+// /\d{7,}/,/\w{5,}\s\d+/,/[a-zA-Z0-9]{3,}/,/[a-zA-Z0-9]{3,}/,/[0-9]{7,8}/
+// ];
+
+// function validate(e){
+//     for (i=0; i<questions.length; i++){
+//         if (patterns[i].test(questions[i].querySelector('input').value) === false ){
+//             console.log(questions[i].querySelector('p'));
+//         }    
+//     }
+//     e.preventDefault()
+// }
 
 function valFullName(){
     var val = fullName.querySelector('input').value,
@@ -212,29 +228,46 @@ function focusDni(){
 var submitTxt = '';
 
 
-function submitForm(e){
-    var validations = [valFullName(),valEmail(),valPassword(),valRepeatPassword(),valAge(),valTel(),valDirection(),valCity(),valPostalCode(),valDni()],
-    inputs = [fullName, email, password, repeatPassword, age, tel, direction, city, postalCode, dni],
-    values = [fullName.querySelector('input').value, email.querySelector('input').value, 
-    password.querySelector('input').value, repeatPassword.querySelector('input').value, age.querySelector('input').value, 
-    tel.querySelector('input').value, direction.querySelector('input').value, city.querySelector('input').value, 
-    postalCode.querySelector('input').value, dni.querySelector('input').value];
-    var count = 0; 
+// function submitForm(e){
+//     var validations = [valFullName(),valEmail(),valPassword(),valRepeatPassword(),valAge(),valTel(),valDirection(),valCity(),valPostalCode(),valDni()],
+//     questions = [fullName, email, password, repeatPassword, age, tel, direction, city, postalCode, dni],
+//     values = [fullName.querySelector('input').value, email.querySelector('input').value, 
+//     password.querySelector('input').value, repeatPassword.querySelector('input').value, age.querySelector('input').value, 
+//     tel.querySelector('input').value, direction.querySelector('input').value, city.querySelector('input').value, 
+//     postalCode.querySelector('input').value, dni.querySelector('input').value];
+//     var count = 0; 
 
     
-    for(i = 0; i < validations.length; i++){
-        if (validations[i] == true){
-            submitTxt = submitTxt + ' ' + values[i];
-            count = ++count;
+//     for(i = 0; i < validations.length; i++){
+//         if (validations[i] == true){
+//             submitTxt = submitTxt + ' ' + values[i];
+//             count = ++count;
+//         }
+//     }
+//     if (count == 10){
+//         alert(values.join("\n"));
+//     } else {
+//         console.log(count)
+//         alert('error');
+//         console.log(submitTxt)
+//     }
+//     e.preventDefault()
+// }
+text = ' ';
+var validations = [valFullName(),valEmail(),valPassword(),valRepeatPassword(),valAge(),valTel(),valDirection(),valCity(),valPostalCode(),valDni()],
+questions = [fullName, email, password, repeatPassword, age, tel, direction, city, postalCode, dni];
+
+function submitForm(e){
+    for (i=0; i < questions.length; i++){
+        if (validations[i] === true){
+        text = text + questions[i].querySelector('label').innerText + ': ' + questions[i].querySelector('input').value + '\n\n';
+        } else {
+            text = text +  questions[i].querySelector('label').innerText + ': ' + questions[i].querySelector('p').innerText + '\n\n';
         }
     }
-    if (count == 10){
-        alert(values.join("\n"));
-    } else {
-        console.log(count)
-        alert('error');
-        console.log(submitTxt)
-    }
-    e.preventDefault()
+    alert(text);
+    text = '';
+    e.preventDefault();
 }
+
 

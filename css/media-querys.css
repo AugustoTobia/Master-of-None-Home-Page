@@ -11,6 +11,9 @@
     .sideArticle {
         font-size: 1vw;
     }
+    .articleTitle, .errorActive{
+        font-size: 2vw;
+    }
 }
 @media (min-width: 1024px) {
     .secondaryArticles{
@@ -23,10 +26,7 @@
     .previewText:hover .hidde, .bck2:hover .hidde, .bck3:hover .hidde, .bck4:hover .hidde{
         visibility: visible;
     }
-    .articleTitle{
-        font-size: 1vw;
-    }
-    .errorActive {
+    .articleTitle, .errorActive{
         font-size: 1vw;
     }
 }
