@@ -75,14 +75,14 @@
             <section id="info">
                 <section class="formImput" id="fullName">
                     <label for="name">Full Name</label>
-                    <input type="text" id="name">
+                    <input type="text" id="name" autofocus>
                     <p id="errorFullName" class="errorMessage">Must contain name and lastname with a blank space in between and 6 digits at least.</p>
                 </section>
 
                 <section class="formImput" id="email">
                     <label for="mail">Email</label>
                     <input type="email" id="mail">
-                    <p class="errorMessage">Must correspond with an email. Example: "address@email.com".</p>
+                    <p class="errorMessage">Must be written as an email address. Example: "address@email.com".</p>
                 </section>
                 
                 <section class="formImput"  id="password">
@@ -94,7 +94,7 @@
                 <section class="formImput" id="repeatPassword">
                     <label for="repPass">Repeat Password</label>
                     <input type="password" id="repPass">
-                    <p class="errorMessage">It doesn't correspond to the password</p>
+                    <p class="errorMessage">It doesn't correspond to the password.</p>
                 </section>
                 
                 <section class="formImput"  id="age">
@@ -124,7 +124,7 @@
                 <section class="formImput" id="postalCode">
                     <label for="postal">Postal Code</label>
                     <input type="text" id="postal">
-                    <p class="errorMessage">Must have at least 3 characters</p>
+                    <p class="errorMessage">Must have at least 3 characters.</p>
                 </section>
                 
                 <section class="formImput" id="dni">
@@ -135,7 +135,9 @@
             </section>
 
             <section class="buttons">
-                <input type="button" id="cancel" class="formButton" value="Cancel">
+                <a href="index.html" id="cancel" class="formButton">
+                    Cancel
+                </a>
                 <input type="submit" id="submit" class="formButton" value="Submit">
             </section>
         </form>

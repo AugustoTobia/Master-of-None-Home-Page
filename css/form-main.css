@@ -17,7 +17,7 @@ form {
     display: flex;
     flex-flow: row wrap;
     max-width: 750px;
-    padding:20px;
+    padding: 20px;
     border-radius: 15px;
     background-color: #ed8c00;
 }
@@ -65,8 +65,9 @@ form {
 }
 .formButton{
     max-width: 20%;
-    background-color: #08000f;
-    color: #fff;
+    padding: 5px;
     border: 5px solid #ffbc40;
     border-radius: 5px;
+    background-color: #08000f;
+    color: #fff;
 }
